@@ -23,6 +23,7 @@
 // ============================================================
 // Menampilkan judul sistem ke tab Console (F12)
 console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
+console.log("Skrip app.js berhasil terhubung!");
 
 // TODO 1: Tulis satu baris console.log() untuk memastikan file app.js sudah terhubung!
 // Contoh output: "Skrip app.js berhasil terhubung!"
@@ -40,6 +41,15 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "namaKasir" (misal: "Kak Eko") dan "shiftKerja" menggunakan "let".
 // 3. Cetak nilai NAMA_KEDAI, namaKasir, dan shiftKerja ke Console menggunakan console.log().
 
+const NAMA_KEDAI = "KEDAI KOPI NADIA";
+let namaKasir = "KAK RISYAD";
+
+if (namaPelanggan) {
+  console.log("Halo, " + namaPelanggan + "!");
+} else {
+  namaPelanggan = "PELANGGAN SETIA";
+  console.log("Halo, " + namaPelanggan + "!");
+}
 
 
 
@@ -47,7 +57,8 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // TODO 2B:
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
 // lalu cetak ke Console untuk membuktikan bahwa variabel "let" nilainya dapat diubah.
-
+namaKasir = "Kak JEJE";
+console.log("Nama kasir sekarang: " + namaKasir);
 
 
 
@@ -58,8 +69,17 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 3. Gunakan percabangan "if - else":
 //    - JIKA namaPelanggan ada isinya: tampilkan alert sapaan dan log ke console.
 //    - JIKA namaPelanggan kosong / klik Cancel: beri nilai default "Pelanggan Setia" dan tampilkan alert pemberitahuan.
+alert("Selamat datang di " + NAMA_KEDAI + "!");
+let namaPelanggan = prompt("Masukkan nama Anda:");
 
-
+if (namaPelanggan) {
+  alert("Halo, " + namaPelanggan + "! Terima kasih sudah berkunjung.");
+  console.log("Halo, " + namaPelanggan + "!");
+} else {
+  namaPelanggan = "PELANGGAN SETIA";
+  alert("Nama tidak diisi. Anda akan tercatat sebagai " + namaPelanggan + ".");
+  console.log("Halo, " + namaPelanggan + "!");
+}
 
 
 // ============================================================
@@ -73,6 +93,16 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "totalPoin" yang menjumlahkan ketiga variabel poin di atas.
 // 3. Cetak rincian perolehan poin dan totalPoin ke Console menggunakan console.log().
 
+let poinKopi = 50;
+let poinMakanan = 65;
+let poinMerchandise = 85;
+let totalPoin = poinKopi + poinMakanan + poinMerchandise;
+
+console.log("=== RINCIAN POIN: " + namaPelanggan + " ===");
+console.log("Poin Kopi        : " + poinKopi);
+console.log("Poin Makanan     : " + poinMakanan);
+console.log("Poin Merchandise : " + poinMerchandise);
+console.log("Total Poin       : " + totalPoin);
 
 
 
